@@ -11,12 +11,12 @@ const IngredientTable = () => {
         <Text style={styles.textGray}>6 items</Text>
       </View>
       <View style={styles.ingredientCard}>
-        <Text>Eggs</Text>
-        <Text>3pc</Text>
+        <Text style={styles.ingrText}>Eggs</Text>
+        <Text style={styles.ingrText}>3pc</Text>
       </View>
       <View style={styles.ingredientCard}>
-        <Text>Eggs</Text>
-        <Text>3pc</Text>
+        <Text style={styles.ingrText}>Eggs</Text>
+        <Text style={styles.ingrText}>3pc</Text>
       </View>
     </View>
   );

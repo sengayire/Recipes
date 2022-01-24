@@ -1,4 +1,4 @@
-import {FlatList, Text, View} from 'react-native';
+import {FlatList, SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
 import Card from '../common/Card';
 import Input from '../common/Input';
@@ -18,6 +18,14 @@ const Home = () => {
       id: '58694a0f-3da1-471f-bd96-145571e29d72',
       title: 'Third Item',
     },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d74',
+      title: 'Third Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d52',
+      title: 'Third Item',
+    },
   ];
   const renderItem = ({item}) => (
     <View style={styles.cardContainer}>
@@ -26,7 +34,9 @@ const Home = () => {
   );
   return (
     <View style={styles.container}>
-      <Text style={styles.headerTitle}>Hello, Mark</Text>
+      <SafeAreaView>
+        <Text style={styles.headerTitle}>Hello, Mark</Text>
+      </SafeAreaView>
       <Input placeholder="Search by recieps" />
       <View style={{display: 'flex', flexDirection: 'row', paddingTop: 20}}>
         <Tag />
@@ -34,6 +44,7 @@ const Home = () => {
         <Tag />
       </View>
       <FlatList
+        showsVerticalScrollIndicator={false}
         data={DATA}
         renderItem={renderItem}
         keyExtractor={item => item.id}

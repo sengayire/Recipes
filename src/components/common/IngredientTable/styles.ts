@@ -1,10 +1,13 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../../utils/colors';
 
 const styles = StyleSheet.create({
   ingredient: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    color: colors.primary,
+    paddingBottom: 20,
   },
   ingredientCard: {
     display: 'flex',
@@ -18,6 +21,12 @@ const styles = StyleSheet.create({
   },
   textGray: {
     color: 'gray',
+    fontWeight: '300',
+  },
+  ingrText: {
+    color: colors.primary,
+    fontWeight: '500',
+    paddingBottom: 15,
   },
 });
 
