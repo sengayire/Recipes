@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import Card from '../common/Card';
 import IngredientTable from '../common/IngredientTable';
 import Tag from '../common/Tag';
