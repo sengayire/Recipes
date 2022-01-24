@@ -1,11 +1,7 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../../utils/colors';
 
 const styles = StyleSheet.create({
-  input: {
-    backgroundColor: 'gray',
-    height: 40,
-    borderRadius: 10,
-  },
   card: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -22,10 +18,12 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   cardTextBold: {
-    color: 'white',
+    color: colors.white,
     fontWeight: 'bold',
   },
-  image: {borderRadius: 20},
+  image: {
+    borderRadius: 20,
+  },
 });
 
 export default styles;

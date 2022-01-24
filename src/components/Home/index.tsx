@@ -26,9 +26,11 @@ const Home = () => {
   );
   return (
     <View style={styles.container}>
-      <Text>Hello, Mark</Text>
-      <Input />
-      <View>
+      <Text style={styles.headerTitle}>Hello, Mark</Text>
+      <Input placeholder="Search by recieps" />
+      <View style={{display: 'flex', flexDirection: 'row', paddingTop: 20}}>
+        <Tag />
+        <Tag selected />
         <Tag />
       </View>
       <FlatList

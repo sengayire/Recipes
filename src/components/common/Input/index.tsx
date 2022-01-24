@@ -1,11 +1,18 @@
 import React from 'react';
 import {TextInput, View} from 'react-native';
 import styles from './styles';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import colors from '../../../utils/colors';
 
-const Input = () => {
+interface Props {
+  placeholder?: string;
+}
+
+const Input = ({placeholder}: Props) => {
   return (
-    <View>
-      <TextInput style={styles.input} placeholder="search by recieps" />
+    <View style={styles.input}>
+      <Icon name="search" size={20} color={colors.primary} />
+      <TextInput style={styles.textInput} placeholder={placeholder} />
     </View>
   );
 };

@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import colors from '../../utils/colors';
 
 const styles = StyleSheet.create({
   container: {
@@ -6,6 +7,12 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     paddingTop: 20,
+  },
+  headerTitle: {
+    color: colors.secondary,
+    fontWeight: 'bold',
+    fontSize: 16,
+    paddingBottom: 30,
   },
 });
 
