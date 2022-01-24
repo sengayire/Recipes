@@ -48,9 +48,14 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     paddingTop: 20,
+    bottom: 100,
   },
   icon: {
     paddingLeft: 10,
+  },
+  description: {
+    fontWeight: '100',
+    fontSize: 18,
   },
 });
 

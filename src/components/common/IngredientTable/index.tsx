@@ -1,24 +1,41 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 
 import styles from './styles';
-
-const IngredientTable = () => {
+interface Props {
+  data: {[key: string]: string};
+}
+const IngredientTable = ({data}: Props) => {
   return (
-    <View>
+    <ScrollView>
       <View style={styles.ingredient}>
-        <Text style={styles.textBold}>Ingredients</Text>
-        <Text style={styles.textGray}>6 items</Text>
+        <Text style={styles.textBold}>Nutrition</Text>
       </View>
       <View style={styles.ingredientCard}>
-        <Text style={styles.ingrText}>Eggs</Text>
-        <Text style={styles.ingrText}>3pc</Text>
+        <Text style={styles.ingrText}>Protein</Text>
+        <Text style={styles.ingrText}>{data.protein}</Text>
       </View>
       <View style={styles.ingredientCard}>
-        <Text style={styles.ingrText}>Eggs</Text>
-        <Text style={styles.ingrText}>3pc</Text>
+        <Text style={styles.ingrText}>Fat</Text>
+        <Text style={styles.ingrText}>{data.fat}</Text>
       </View>
-    </View>
+      <View style={styles.ingredientCard}>
+        <Text style={styles.ingrText}>Calories</Text>
+        <Text style={styles.ingrText}>{data.calories}</Text>
+      </View>
+      <View style={styles.ingredientCard}>
+        <Text style={styles.ingrText}>Sugar</Text>
+        <Text style={styles.ingrText}>{data.sugar}</Text>
+      </View>
+      <View style={styles.ingredientCard}>
+        <Text style={styles.ingrText}>Carbohydrates</Text>
+        <Text style={styles.ingrText}>{data.carbohydrates}</Text>
+      </View>
+      <View style={styles.ingredientCard}>
+        <Text style={styles.ingrText}>Fiber</Text>
+        <Text style={styles.ingrText}>{data.fiber}</Text>
+      </View>
+    </ScrollView>
   );
 };
 

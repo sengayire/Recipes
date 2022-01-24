@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   FlatList,
   SafeAreaView,
@@ -14,29 +14,23 @@ import Card from '../common/Card';
 import Tag from '../common/Tag';
 import MeasureCard from '../common/MeasureCard';
 import IngredientTable from '../common/IngredientTable';
+import {useRoute} from '@react-navigation/native';
 
 import styles from './styles';
 import colors from '../../utils/colors';
+
 const Recipes = () => {
   const {goBack} = useNavigation<NativeStackNavigationProp<any, any>>();
-  const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-  ];
-  const renderItem = ({item}) => (
-    <View style={styles.cardContainer}>
-      <Tag />
-    </View>
+  const {
+    params: {data},
+  } = useRoute();
+
+  const renderItem = ({item}: any) => (
+    <TouchableOpacity>
+      <View style={styles.cardContainer}>
+        <Tag name={item.display_name} selected={true} />
+      </View>
+    </TouchableOpacity>
   );
   return (
     <View style={styles.recipesContainer}>
@@ -45,25 +39,27 @@ const Recipes = () => {
         <Text style={styles.headerText}>Recipe Detail</Text>
       </SafeAreaView>
       <View style={styles.cardContainer}>
-        <Card
-          showContent={false}
-          imageUrl="https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/recipes/9b99644cbd9146ce8f93d5905b435e09.jpeg"
-        />
+        <Card showContent={false} imageUrl={data.thumbnail_url} />
       </View>
-      <Text style={styles.textBold}>Toast with egg and avocado</Text>
-      <MeasureCard />
+      <Text style={styles.textBold}>{data.name}</Text>
+      <Text style={styles.description}>{data.description}</Text>
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
-        data={DATA}
+        data={data.tags}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
-      <IngredientTable />
+      <IngredientTable data={data.nutrition} />
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.btnText}>Start cooking</Text>
-          <Icon name="play" color={colors.white} style={styles.icon} />
+          <Icon
+            name="play"
+            color={colors.white}
+            style={styles.icon}
+            size={15}
+          />
         </TouchableOpacity>
       </View>
     </View>

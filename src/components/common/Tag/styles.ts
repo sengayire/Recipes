@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     backgroundColor: colors.lightGrey,
-    width: 100,
     borderRadius: 10,
     padding: 10,
     marginRight: 20,
@@ -20,7 +19,6 @@ const styles = StyleSheet.create({
 
     display: 'flex',
     alignItems: 'center',
-    width: 100,
     borderRadius: 10,
     padding: 10,
     marginRight: 20,
