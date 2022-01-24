@@ -1,5 +1,5 @@
 import {FlatList, SafeAreaView, Text, View} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import Card from '../common/Card';
 import Input from '../common/Input';
 import styles from './styles';
@@ -29,7 +29,10 @@ const Home = () => {
   ];
   const renderItem = ({item}) => (
     <View style={styles.cardContainer}>
-      <Card />
+      <Card
+        imageUrl="https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/recipes/9b99644cbd9146ce8f93d5905b435e09.jpeg"
+        showContent={true}
+      />
     </View>
   );
   return (
