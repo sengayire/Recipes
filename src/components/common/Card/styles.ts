@@ -27,6 +27,12 @@ const styles = StyleSheet.create({
   image: {
     borderRadius: 20,
   },
+  imagePlaceholder: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 250,
+    borderRadius: 10,
+  },
 });
 
 export default styles;

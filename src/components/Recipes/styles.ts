@@ -28,6 +28,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
     backgroundColor: colors.secondary,
     borderRadius: 10,
     alignItems: 'center',
@@ -45,6 +48,9 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     paddingTop: 20,
+  },
+  icon: {
+    paddingLeft: 10,
   },
 });
 

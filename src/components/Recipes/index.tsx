@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   FlatList,
   SafeAreaView,
@@ -6,15 +6,17 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import Card from '../common/Card';
-import IngredientTable from '../common/IngredientTable';
-import Tag from '../common/Tag';
-import styles from './styles';
-import Icon from 'react-native-vector-icons/Ionicons';
-import MeasureCard from '../common/MeasureCard';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import Icon from 'react-native-vector-icons/Ionicons';
 
+import Card from '../common/Card';
+import Tag from '../common/Tag';
+import MeasureCard from '../common/MeasureCard';
+import IngredientTable from '../common/IngredientTable';
+
+import styles from './styles';
+import colors from '../../utils/colors';
 const Recipes = () => {
   const {goBack} = useNavigation<NativeStackNavigationProp<any, any>>();
   const DATA = [
@@ -43,7 +45,10 @@ const Recipes = () => {
         <Text style={styles.headerText}>Recipe Detail</Text>
       </SafeAreaView>
       <View style={styles.cardContainer}>
-        <Card showContent={false} />
+        <Card
+          showContent={false}
+          imageUrl="https://img.buzzfeed.com/tasty-app-user-assets-prod-us-east-1/recipes/9b99644cbd9146ce8f93d5905b435e09.jpeg"
+        />
       </View>
       <Text style={styles.textBold}>Toast with egg and avocado</Text>
       <MeasureCard />
@@ -58,6 +63,7 @@ const Recipes = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.btnText}>Start cooking</Text>
+          <Icon name="play" color={colors.white} style={styles.icon} />
         </TouchableOpacity>
       </View>
     </View>
