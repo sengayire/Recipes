@@ -1,9 +1,9 @@
-import {FlatList, SafeAreaView, Text, View} from 'react-native';
 import React from 'react';
+import {FlatList, SafeAreaView, Text, View} from 'react-native';
+
 import Card from '../common/Card';
 import Input from '../common/Input';
 import styles from './styles';
-import Tag from '../common/Tag';
 import axios from '../../helpers/axios';
 
 const Home = () => {
@@ -26,7 +26,9 @@ const Home = () => {
       <SafeAreaView>
         <Text style={styles.headerTitle}>Hello, Mark</Text>
       </SafeAreaView>
-      <Input placeholder="Search by recieps" />
+      <View style={styles.inputContainer}>
+        <Input placeholder="Search by recieps" />
+      </View>
       <FlatList
         showsVerticalScrollIndicator={false}
         data={data?.results}

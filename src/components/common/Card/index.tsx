@@ -17,8 +17,8 @@ const Card = ({showContent = true, imageUrl, data}: Props) => {
   const {navigate} = useNavigation<NativeStackNavigationProp<any, any>>();
   const [isLoading, setIsLoading] = useState<boolean>();
   const rating =
-    data?.user_ratings && data?.user_ratings?.score > 0
-      ? parseInt(+data?.user_ratings?.score).toFixed(2)
+    data?.user_ratings && data?.user_ratings?.score > 0.0
+      ? parseInt(+data?.user_ratings?.score).toFixed(1)
       : 0;
 
   return (

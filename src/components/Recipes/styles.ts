@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   recipesContainer: {
+    flex: 1,
     padding: 20,
   },
   textGay: {
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     paddingTop: 20,
-    bottom: 100,
+    paddingBottom: 20,
   },
   icon: {
     paddingLeft: 10,
