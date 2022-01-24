@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     paddingBottom: 30,
   },
+  inputContainer: {
+    paddingBottom: 10,
+  },
 });
 
 export default styles;
