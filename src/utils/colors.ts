@@ -9,7 +9,7 @@ type ColorsType = {
 const colors: ColorsType = {
   primary: '#454545',
   secondary: '#43927D',
-  lightGrey: '#EFEEEE',
+  lightGrey: '#DCDADA',
   secondaryLight: '#B9D0CA',
   white: '#ffffff',
 };

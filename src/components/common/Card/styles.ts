@@ -3,11 +3,14 @@ import colors from '../../../utils/colors';
 
 const styles = StyleSheet.create({
   card: {
-    display: 'flex',
-    justifyContent: 'space-between',
     borderRadius: 10,
     height: 250,
     padding: 20,
+  },
+  cardContent: {
+    display: 'flex',
+    flex: 1,
+    justifyContent: 'space-between',
   },
   nameRate: {
     display: 'flex',
