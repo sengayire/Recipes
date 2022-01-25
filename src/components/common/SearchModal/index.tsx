@@ -27,9 +27,12 @@ const SearchModal = ({openModal, setOpenModal, value, setValue}: Props) => {
             '4d3780ba10msh1efaa74c3980e41p16c1b0jsn3c1c89cf0892',
         },
       } as {};
-      axios.request(options).then(function (response) {
-        setData(response.data);
-      });
+      axios
+        .request(options)
+        .then(function (response) {
+          setData(response.data);
+        })
+        .catch(err => err);
     }, 500);
     return () => clearTimeout(timeoutId);
   }, [value]);
